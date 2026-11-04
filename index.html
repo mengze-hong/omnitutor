@@ -21,6 +21,8 @@
 .coverage{margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}.coverage>.label{color:var(--green);margin-bottom:7px}.coverage-intro{font-size:12px;color:var(--dim);margin:8px 0 16px}.matrix-scroll{overflow-x:auto}.coverage-table{width:100%;border-collapse:collapse;font-size:12px;line-height:1.8}.coverage-table th{text-align:left;color:var(--green);background:var(--mint);font-weight:600}.coverage-table th,.coverage-table td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}.coverage-table th:first-child{width:18%}.coverage-table td:first-child{font-weight:600;color:var(--ink)}.coverage-table td{color:var(--dim)}.coverage-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:23px}.coverage-pair article{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px}.coverage-pair p,.coverage-pair dl{font-size:12px;color:var(--dim);margin:10px 0 0;line-height:1.85}.coverage-pair dt{font-weight:600;color:var(--green);margin-top:8px}.coverage-pair dd{margin:2px 0 0}.coverage-subtitle{margin:26px 0 14px}.paired-note{background:var(--mint);border-radius:9px;margin-top:20px;padding:17px 20px;font-size:12px}.paired-note b{color:var(--green)}.paired-note p{margin-top:6px;color:var(--dim)}@media(max-width:760px){.coverage-pair{grid-template-columns:1fr}.coverage-table{font-size:11px;min-width:550px}.coverage-pair article{padding:17px}.topnav a[href="#coverage"]{display:inline}.topnav{gap:8px}.topnav a[href="#bench-examples"]{display:inline;font-size:10px}.draft{display:none}}@media print{.coverage-table{font-size:10px}.coverage-pair article{break-inside:avoid}}
 
 .catalog-entry{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 20px;background:var(--mint);border:1px solid #c9d7c2;border-radius:10px;text-decoration:none;color:var(--green);margin-bottom:24px}.catalog-entry small{display:block;font-size:12px;color:var(--dim);margin-top:5px}.catalog-entry>span:last-child{font-size:24px}@media(max-width:760px){.topnav a[href="tasks.html"]{display:inline;font-size:11px}.catalog-entry{padding:15px}.catalog-entry small{font-size:11px}}
+
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:23px}.hero-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:10px 15px;border:1px solid #bccbb8;border-radius:7px;background:var(--paper);color:var(--green);font-size:12px;font-weight:600;text-decoration:none;transition:background .15s,border-color .15s}.hero-button:hover{background:var(--mint);border-color:var(--green)}.hero-button.primary{background:var(--green);border-color:var(--green);color:var(--paper)}.hero-button.primary:hover{background:#224f40}@media(max-width:760px){.hero-actions{margin-top:20px;gap:8px}.hero-button{padding:10px 12px;font-size:11px}}
   </style>
 </head>
 <body>
@@ -35,6 +37,7 @@
           <div class="eyebrow">REALTIME MULTIMODAL TUTORING</div>
           <h1 id="page-title">边看、边听<br><em>实时互动教学</em></h1>
           <p class="lead">以教学为应用载体，研究 omni realtime interactive model 能否联合理解连续画面、真实声音与交互历史，并在恰当时刻回应、示范、等待和调整。从学前游戏到中学解题，覆盖听写、朗读、演奏与操作。</p>
+          <nav class="hero-actions" aria-label="探索 OmniTutor"><a class="hero-button primary" href="tasks.html">学科与任务清单 <span aria-hidden="true">↗</span></a><a class="hero-button" href="#coverage">任务与交互条件</a><a class="hero-button" href="#bench-examples">Bench 视角示例</a></nav>
         </div>
         <div class="hero-side">
           <div class="label">RESEARCH QUESTION</div>
@@ -42,7 +45,7 @@
           <div class="research-chain"><span>Bench 定位能力</span><i>→</i><span>Harness 验证机制</span><i>→</i><span>Demo 呈现闭环</span></div>
         </div>
       </section>
-      <p style="margin:0 0 18px"><a href="tasks.html" style="color:var(--green);font-size:13px">浏览学科与任务清单：听力、听写、数学解题、音乐与学前活动 →</a></p>
+      
       <div class="setting" aria-label="任务设定">
         <span><b>阶段</b>学前 · 小学 · 中学</span>
         <span><b>输入</b>同步音视频 · 任务动作 · 交互历史</span>
