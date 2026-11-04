@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta name="description" content="OmniTutor 研究方案：面向连续学习轨迹的实时多模态辅导评测、harness 方法与交互演示。">
-  <title>OmniTutor · 从解题轨迹到主动教学</title>
+  <meta name="description" content="OmniTutor 研究方案：面向学前、小学与中学的 omni 实时音视频交互教学，覆盖多学科任务、观察条件与交互干扰。">
+  <title>OmniTutor · 实时音视频交互教学</title>
   <style>
     :root{--bg:#f5f4ee;--paper:#fffef9;--ink:#202f2c;--dim:#68736b;--green:#2c6652;--mint:#e4ede3;--line:#dcdfd5;--amber:#95602e;--red:#a24e3d;--blue:#486984;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;--sans:Inter,-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
     *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.65 var(--sans);-webkit-font-smoothing:antialiased}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-underline-offset:4px}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #a5bd80;outline-offset:4px}button:disabled{cursor:default;opacity:.45}h1,h2,h3,p{margin:0}h1,h2,h3{font-weight:650}h2{font-size:26px;letter-spacing:-.04em;line-height:1.4}h3{font-size:16px;line-height:1.5}.wrap{max-width:1260px;margin:auto;padding:0 44px}.topbar{height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:20px}.wordmark{display:inline-flex;align-items:center;gap:10px;font-size:19px;font-weight:700;letter-spacing:-.04em;text-decoration:none}.orb{width:25px;height:25px;border-radius:50%;background:radial-gradient(circle at 32% 22%,#d5e1b7,#74a48a 46%,#366957 85%);box-shadow:inset 0 0 0 1px #fff8,0 0 0 4px #e3e9db}.topnav{display:flex;gap:26px;align-items:center;font-size:12px;color:var(--dim)}.topnav a{text-decoration:none}.topnav a:hover{color:var(--green)}.draft{border:1px solid #cdd8c9;border-radius:30px;padding:4px 10px;color:var(--green);font-size:11px;white-space:nowrap}.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:66px;padding:54px 0 40px;align-items:end}.eyebrow{display:flex;align-items:center;gap:8px;color:var(--green);font:11px/1.5 var(--mono);letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}.eyebrow:before{content:"";height:1px;width:24px;background:currentColor}h1{font-size:clamp(32px,4.3vw,55px);letter-spacing:-.055em;line-height:1.25}h1 em{font-style:normal;color:var(--green)}.lead{font-size:15px;color:var(--dim);margin-top:22px;max-width:630px;line-height:1.9}.hero-side{border-left:1px solid #cdd5c8;padding-left:25px;margin-bottom:4px}.hero-side .label{font:10px var(--mono);letter-spacing:.1em;color:var(--dim)}.question{margin:10px 0 18px;font-size:18px;line-height:1.7}.research-chain{display:flex;gap:10px;align-items:center;color:var(--green);font-size:12px;font-weight:650}.research-chain i{font-style:normal;color:#9aa99a}.setting{display:flex;gap:26px;align-items:center;flex-wrap:wrap;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:12px;color:var(--dim)}.setting b{color:var(--ink);font-weight:550}.setting span{display:flex;gap:8px;align-items:center}.setting span:before{content:"";width:5px;height:5px;border-radius:50%;background:#88a083}.section{padding-top:45px}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:21px}.section-title{display:flex;gap:15px;align-items:flex-start}.num{font:11px var(--mono);color:var(--green);padding-top:8px}.section-head p,.caption{color:var(--dim);font-size:12px;max-width:480px}.section-head p{text-align:right}.timeline-box{border:1px solid #d3dace;background:var(--paper);border-radius:15px;overflow:hidden;box-shadow:0 8px 30px #223c2b04}.timeline-toolbar{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:16px 22px;border-bottom:1px solid var(--line)}.scenario-controls{display:flex;gap:3px;background:#eeefe8;border-radius:7px;padding:3px}.scenario-controls button{border:0;background:none;border-radius:5px;padding:6px 13px;color:var(--dim);font-size:12px}.scenario-controls button[aria-pressed="true"]{background:#fffef9;color:var(--green);box-shadow:0 1px 5px #24352b15;font-weight:650}.example-tag{font-size:11px;color:var(--dim);display:flex;align-items:center;gap:7px}.example-tag:before{content:"";width:5px;height:5px;border-radius:50%;background:#aab59e}.timeline-scroll{overflow-x:auto;overscroll-behavior-x:contain;padding:22px 22px 14px}.timeline-track{display:grid;grid-template-columns:repeat(8,minmax(98px,1fr));position:relative;min-width:810px}.timeline-track:before{content:"";position:absolute;left:6%;right:6%;top:39px;height:1px;background:#d9dfd2}.event{background:none;border:0;padding:0 4px 12px;display:flex;align-items:center;flex-direction:column;position:relative;z-index:1;color:var(--dim);min-width:0}.event .event-index{font:10px var(--mono);color:#86927e;line-height:18px;margin-bottom:12px}.event .dot{width:19px;height:19px;background:var(--paper);border:2px solid #c6d2c0;border-radius:50%;margin-bottom:12px;display:grid;place-items:center;transition:background .18s,border-color .18s}.event .dot:after{content:"";width:5px;height:5px;background:#c6d2c0;border-radius:50%}.event[data-kind="error"] .dot{border-color:#b68169}.event[data-kind="error"] .dot:after{background:#b68169}.event[aria-current="step"]{color:var(--ink)}.event[aria-current="step"] .dot{background:var(--green);border-color:var(--green);box-shadow:0 0 0 5px #e8eee2}.event[aria-current="step"] .dot:after{background:#fff}.event b{font-size:12px;font-weight:600}.event small{font-size:10px;margin-top:3px;color:#899182}.event:hover .dot{border-color:var(--green)}.snapshot{display:grid;grid-template-columns:.9fr 1.2fr 1.1fr;gap:0;border-top:1px solid var(--line);background:#fafaf4}.snapshot>div{padding:22px 25px;min-width:0}.snapshot>div+div{border-left:1px solid var(--line)}.label{font-size:10px;letter-spacing:.08em;color:var(--dim);font-weight:600}.paper-work{font-family:Georgia,"Times New Roman",serif;font-size:24px;line-height:1.5;margin:10px 0 3px;letter-spacing:.01em;white-space:pre-line}.paper-work .bad{color:var(--red)}.small-note{font-size:11px;color:var(--dim)}.context-row{display:flex;justify-content:space-between;gap:12px;font-size:11px;line-height:1.8;margin-top:5px}.context-row span:first-child{color:var(--dim);flex-shrink:0}.context-row b{font-weight:550;text-align:right}.context-list{margin-top:11px}.decision{display:inline-flex;align-items:center;gap:6px;font-size:11px;padding:3px 8px;border-radius:4px;margin:9px 0;background:var(--mint);color:var(--green)}.decision[data-tone="error"]{background:#f2e6dd;color:#965039}.decision[data-tone="wait"]{background:#eaece5;color:#65705d}.speech{font-size:14px;line-height:1.8;min-height:50px}.background-action{margin-top:9px;font-size:11px;color:var(--dim);border-top:1px dashed #d8decf;padding-top:8px}.timeline-footer{display:flex;justify-content:space-between;align-items:center;padding:12px 22px;border-top:1px solid var(--line);gap:14px}.timeline-footer p{font-size:11px;color:var(--dim)}.arrows{display:flex;gap:6px}.arrows button{border:1px solid #d6ddce;border-radius:5px;background:transparent;color:var(--green);width:31px;height:29px;line-height:1}.mechanisms{display:grid;grid-template-columns:repeat(3,1fr);margin:22px 0 0;gap:30px}.mechanism{padding-left:15px;border-left:2px solid #b7c8ad}.mechanism .label{color:var(--green)}.mechanism h3{margin:7px 0 6px}.mechanism p{font-size:12px;color:var(--dim);line-height:1.85}.method-foot{font-size:11px;color:var(--dim);margin-top:17px}.method-foot b{font-weight:550;color:var(--green)}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:45px}.ability-list{border-top:1px solid var(--line)}.ability{display:grid;grid-template-columns:37px 120px 1fr;gap:8px;padding:17px 0;border-bottom:1px solid var(--line)}.ability .a-index{font:11px var(--mono);color:#899784;padding-top:3px}.ability h3{font-size:14px}.ability p{color:var(--dim);font-size:12px;line-height:1.8}.ability small{display:block;color:var(--green);font-size:10px;font-weight:500;letter-spacing:.02em;margin-top:4px}.scope{background:#e9eee3;border-radius:12px;padding:23px 26px}.scope h3{font-size:15px}.factors{display:flex;flex-direction:column;margin:16px 0 17px;gap:10px}.factor{display:grid;grid-template-columns:70px 1fr;gap:12px;font-size:12px}.factor-label{font-weight:600;color:var(--green)}.factor-values{color:#5b6d5e}.scope-note{font-size:11px;line-height:1.85;color:#63735f;border-top:1px solid #cfd9c6;padding-top:13px}.negative{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.negative span{border:1px solid #d2dacb;border-radius:4px;padding:3px 7px;font-size:10px;color:#65725e}.protocols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}.protocol{border-top:2px solid #657b61;padding-top:11px}.protocol h3{font-size:13px}.protocol p{font-size:11px;color:var(--dim);margin-top:5px;line-height:1.85}.evaluation{background:#263e36;color:#f5f5eb;border-radius:15px;padding:29px 30px;margin-top:36px;display:grid;grid-template-columns:1fr 1.1fr;gap:40px}.evaluation h3{font-size:17px}.evaluation .label{color:#bdccaf;margin-bottom:7px}.comparison{width:100%;border-collapse:collapse;font-size:12px;margin-top:16px}.comparison td{padding:10px 0;border-top:1px solid #ffffff20;vertical-align:top}.comparison td:first-child{width:41%;color:#f4f4e9;padding-right:12px}.comparison td:last-child{color:#bacbbd;font-size:11px}.comparison tr:last-child td:first-child{color:#dae9b5}.fairness{font-size:11px;color:#bacbbd;margin-top:10px;line-height:1.85}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:18px 23px;margin-top:17px}.metric b{display:block;font-size:12px;font-weight:550;color:#e7eddc;margin-bottom:5px}.metric span{display:block;font-size:11px;color:#b6c7b8;line-height:1.75}.ablation{border-top:1px solid #ffffff20;padding-top:12px;margin-top:20px;font-size:11px;color:#c4d0be}.ablation b{color:#f3f2e4;font-weight:550}.evidence{display:grid;grid-template-columns:1fr 1fr 1fr;gap:25px;margin-top:20px}.evidence-item{border-top:1px solid #bccab2;padding-top:14px}.evidence-item h3{font-size:14px;margin:4px 0 8px}.evidence-item p{font-size:12px;line-height:1.85;color:var(--dim)}.evidence-label{font:10px var(--mono);color:var(--green);letter-spacing:.07em}.positioning{margin:28px 0 0;border:1px solid var(--line);padding:17px 20px;border-radius:8px;display:grid;grid-template-columns:100px 1fr;gap:20px;font-size:12px}.positioning>b{font-size:12px;font-weight:600}.positioning p{color:var(--dim);font-size:11px;line-height:1.9}.positioning a{color:var(--green)}.refs{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:12px;font-size:10px;color:var(--green)}footer{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid var(--line);margin-top:38px;padding:18px 0 30px;font-size:10px;color:var(--dim)}.footer-brand{letter-spacing:.05em;font-weight:600;color:var(--green)}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -17,37 +17,39 @@
     @media print{body{background:#fff;font-size:11px}.wrap{max-width:none;padding:0}.topnav,.scenario-controls,.arrows{display:none}.topbar{height:45px}.hero{padding:23px 0;gap:28px}h1{font-size:35px}.lead{font-size:12px}.hero-side .question{font-size:14px}.section{padding-top:23px}.section-head{margin-bottom:12px}.timeline-box,.scope,.evaluation,.positioning{break-inside:avoid;box-shadow:none}.timeline-track{min-width:0}.timeline-scroll{padding:16px 8px 5px}.event b{font-size:10px}.event small{font-size:8px}.snapshot>div{padding:14px}.mechanisms{gap:16px}.mechanism p,.ability p,.evidence-item p{font-size:10px}.two-col{gap:25px}.evaluation{background:#eff3ed;color:var(--ink);padding:20px;margin-top:23px}.evaluation .label,.comparison td:first-child,.comparison tr:last-child td:first-child,.metric b,.ablation b{color:var(--green)}.comparison td:last-child,.metric span,.fairness,.ablation{color:var(--dim)}.comparison td,.ablation{border-color:#cbd7c8}.evidence{gap:20px}a{text-decoration:none}footer{margin-top:23px}.section-head p{font-size:10px}}
 
 .bench-preview{margin-top:30px}.bench-preview-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:10px}.bench-preview-head span{font-size:11px;color:var(--green)}.bench-preview>p{font-size:12px;color:var(--dim);margin-bottom:17px}.bench-preview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.bench-preview article{min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:11px;overflow:hidden}.bench-preview .image-link{display:block;line-height:0;background:#e9eadf}.bench-preview img{display:block;width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain}.bench-preview .content{padding:14px 17px}.bench-preview .meta{display:flex;justify-content:space-between;gap:10px;color:var(--dim);font-size:10px}.bench-preview .id{font-family:var(--mono)}.bench-preview h3{margin:5px 0 7px}.bench-preview .target{font-size:12px;color:var(--dim)}.bench-preview .target span{margin-right:7px}.bench-preview details{font-size:11px;color:var(--dim);margin-top:9px}.bench-preview summary{cursor:pointer}.bench-preview details p{padding-top:6px}@media(max-width:600px){.bench-preview-grid{grid-template-columns:1fr}.bench-preview-head{align-items:flex-start;flex-direction:column;gap:4px}}
+
+.coverage{margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}.coverage>.label{color:var(--green);margin-bottom:7px}.coverage-intro{font-size:12px;color:var(--dim);margin:8px 0 16px}.matrix-scroll{overflow-x:auto}.coverage-table{width:100%;border-collapse:collapse;font-size:12px;line-height:1.8}.coverage-table th{text-align:left;color:var(--green);background:var(--mint);font-weight:600}.coverage-table th,.coverage-table td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}.coverage-table th:first-child{width:18%}.coverage-table td:first-child{font-weight:600;color:var(--ink)}.coverage-table td{color:var(--dim)}.coverage-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:23px}.coverage-pair article{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px}.coverage-pair p,.coverage-pair dl{font-size:12px;color:var(--dim);margin:10px 0 0;line-height:1.85}.coverage-pair dt{font-weight:600;color:var(--green);margin-top:8px}.coverage-pair dd{margin:2px 0 0}.coverage-subtitle{margin:26px 0 14px}.paired-note{background:var(--mint);border-radius:9px;margin-top:20px;padding:17px 20px;font-size:12px}.paired-note b{color:var(--green)}.paired-note p{margin-top:6px;color:var(--dim)}@media(max-width:760px){.coverage-pair{grid-template-columns:1fr}.coverage-table{font-size:11px;min-width:550px}.coverage-pair article{padding:17px}.topnav a[href="#coverage"]{display:inline}.topnav{gap:8px}.topnav a[href="#bench-examples"]{display:inline;font-size:10px}.draft{display:none}}@media print{.coverage-table{font-size:10px}.coverage-pair article{break-inside:avoid}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header class="topbar">
       <a class="wordmark" href="#top" aria-label="OmniTutor，回到顶部"><span class="orb" aria-hidden="true"></span>OmniTutor</a>
-      <nav class="topnav" aria-label="页面导航"><a href="#harness">Harness</a><a href="#benchmark">Benchmark</a><a href="#bench-examples">视角示例</a><a href="#evidence">Evidence</a><span class="draft">研究方案 · 待验证</span></nav>
+      <nav class="topnav" aria-label="页面导航"><a href="#harness">Harness</a><a href="#benchmark">Benchmark</a><a href="#coverage">任务与交互</a><a href="#bench-examples">视角示例</a><a href="#evidence">Evidence</a><span class="draft">研究方案 · 待验证</span></nav>
     </header>
     <main id="top">
       <section class="hero" aria-labelledby="page-title">
         <div>
           <div class="eyebrow">REALTIME MULTIMODAL TUTORING</div>
-          <h1 id="page-title">从解题轨迹<br>到<em>主动教学</em></h1>
-          <p class="lead">学生在纸上做题，AI 持续观察、实时对话。研究的关键是记住过程、把握介入点，并协调后台演示与前台讲解，让教学在打断之后仍能继续。</p>
+          <h1 id="page-title">边看、边听<br><em>实时互动教学</em></h1>
+          <p class="lead">以教学为应用载体，研究 omni realtime interactive model 能否联合理解连续画面、真实声音与交互历史，并在恰当时刻回应、示范、等待和调整。从学前游戏到中学解题，覆盖听写、朗读、演奏与操作。</p>
         </div>
         <div class="hero-side">
           <div class="label">RESEARCH QUESTION</div>
-          <p class="question">同一个模型，能否借助<br>轨迹与交付状态，<strong>更准确地介入、<br>更连贯地教？</strong></p>
+          <p class="question">Omni 实时交互模型能否<strong>跟上学生正在做什么、听懂在对谁说话，并让教学持续推进？</strong></p>
           <div class="research-chain"><span>Bench 定位能力</span><i>→</i><span>Harness 验证机制</span><i>→</i><span>Demo 呈现闭环</span></div>
         </div>
       </section>
       <div class="setting" aria-label="任务设定">
-        <span><b>视角</b>摄像头直拍纸面，不拍学生</span>
-        <span><b>输入</b>连续画面 + 学生语音</span>
+        <span><b>阶段</b>学前 · 小学 · 中学</span>
+        <span><b>输入</b>同步音视频 · 任务动作 · 交互历史</span>
         <span><b>输出</b>实时语音 + 按需 Web 演示</span>
-        <span><b>目标</b>ACL 主会研究</span>
+        <span><b>研究</b>模型能力评测 + 应用闭环 + 机制验证</span>
       </div>
 
       <section class="section" id="harness" aria-labelledby="harness-title">
         <div class="section-head">
-          <div class="section-title"><span class="num">01</span><h2 id="harness-title">用一条轨迹，管理整次教学</h2></div>
+          <div class="section-title"><span class="num">01</span><h2 id="harness-title">实时模型跟随过程，Harness 协调教学</h2></div>
           <p>点击节点查看当时的上下文与动作。<br>同样的画面，可能需要完全不同的介入。</p>
         </div>
         <div class="timeline-box">
@@ -107,20 +109,25 @@
             </div>
           </div>
           <aside class="scope" aria-label="候选覆盖与泛化协议">
-            <h3>学科 × 触发类型 × 摄像头视角</h3>
+            <h3>任务 × 观察条件 × 交互事件</h3>
             <div class="factors">
-              <div class="factor"><span class="factor-label">候选学科</span><span class="factor-values">数学 · 物理 · 化学 · 英语 · 编程 · 音乐</span></div>
-              <div class="factor"><span class="factor-label">事件触发</span><span class="factor-values">主动提问 · 新错误 · 修订 · 自我改正 · 插话 · 继续 · 换题</span></div>
-              <div class="factor"><span class="factor-label">纸面视角</span><span class="factor-values">俯拍 · 斜拍 · 局部视野 / 遮挡</span></div>
+              <div class="factor"><span class="factor-label">适用阶段</span><span class="factor-values">学前 · 小学 · 中学；年龄作为适用标签</span></div>
+              <div class="factor"><span class="factor-label">候选学科</span><span class="factor-values">语文 · 英语 · 数学 · 物理 · 化学 · 音乐 · 美术 / 手工 · 信息技术</span></div>
+              <div class="factor"><span class="factor-label">核心输入</span><span class="factor-values">同步音视频；声音、指向、书写和操作共同构成证据</span></div>
             </div>
-            <p class="scope-note">按题目、书写者和原始轨迹分组划分，测试未见组合；冻结核心再迁移到留出学科。明确披露新增适配器、提示与工具。音乐演奏另需真实任务音频，不能用看谱问答代替。</p>
-            <div class="negative" aria-label="配对负例"><span>半步书写</span><span>正确的替代解法</span><span>停顿思考</span><span>旧错已讲</span><span>背景说话</span></div>
-            <p class="small-note" style="margin-top:12px">以上是候选覆盖，不代表已完成采集或跨科目验证。</p>
+            <p class="scope-note">按题目、参与者与原始轨迹分组划分，测试未见组合；不将所有维度机械全排列。原生实时交互、因果回放与级联系统分轨报告。纯音频仅作可选消融。</p>
+            <div class="negative"><span>半步书写</span><span>自行修正</span><span>学生对旁人说话</span><span>背景噪声</span><span>音画冲突</span></div>
+            <p class="small-note" style="margin-top:12px">以下为候选覆盖与评测设计，尚非已采集或验证的能力。</p>
           </aside>
+        </div>
+        <div class="coverage" id="coverage"><div class="label">COVERAGE / 候选设计</div><h3>从学习活动出发，展开实时交互能力</h3><p class="coverage-intro">覆盖学前、小学与中学。每类任务都需可观察的音视频证据、可判定动作与时间窗口。</p><div class="matrix-scroll"><table class="coverage-table"><thead><tr><th scope="col">任务族</th><th scope="col">任务拆分</th><th scope="col">音视频交互证据</th></tr></thead><tbody><tr><td>辨认与选择</td><td>命名 · 定位 · 匹配 · 分类 · 排序 · 比较</td><td>听指令指物、举物或分类，联合判断声音与动作。</td></tr><tr><td>听写与记忆提取</td><td>单词 / 句子听写 · 汉字 / 古诗默写 · 补全</td><td>报词后观察落笔，处理重读请求、自改与完成时机。</td></tr><tr><td>朗读与表达</td><td>跟读 · 朗读 · 背诵 · 复述 · 看图描述 · 情境对话</td><td>对齐教材位置与实际语音，区分停顿和说完。</td></tr><tr><td>解题与解释</td><td>计算 · 推导 · 作图 · 证明 · 读图 · 思路解释</td><td>关联口头解释、指向和书写步骤，跟随修订。</td></tr><tr><td>模仿与练习</td><td>节奏模仿 · 视唱 · 接唱 · 指法 · 乐器演奏</td><td>同时看谱、看手、听演奏，定位音高与节奏偏差。</td></tr><tr><td>操作与构建</td><td>摆放 · 拼搭 · 测量 · 折纸 · 实验 · 软件操作</td><td>观察执行顺序与结果，按当前进展给下一步指令。</td></tr><tr><td>创作与修改</td><td>绘画 · 编故事 · 写作 · 旋律创作 · 作品修改</td><td>结合过程和学生表达的意图，提供针对性反馈。</td></tr><tr><td>检查与纠正</td><td>找错 · 核对 · 自我修正 · 比较解法 · 修改后重试</td><td>跨任务叠加；区分正在自改和需要帮助。</td></tr></tbody></table></div>
+          <div class="coverage-pair"><article><h3>观察条件：三个独立维度</h3><dl><dt>采集视角</dt><dd>纸面俯拍、桌面斜拍、人物正面、手部 / 乐器近景、屏幕直采＋学生声音。</dd><dt>可见范围</dt><dd>完整任务区、局部裁切、手部 / 物体遮挡、目标暂时出画。</dd><dt>视角变化</dt><dd>固定、镜头移动、纸张旋转、翻页、脸 / 纸面 / 作品之间切换。</dd></dl></article><article><h3>学前：用短活动形成交互闭环</h3><p>模型发起 → 孩子用声音或动作回应 → 模型根据真实回应继续。优先积木指令与节奏模仿，再扩展找物和绘本共读。</p><p>放对积木即使未说话也算完成；口头说对、操作错误不能判成功。回应不清时澄清，无回应时等待或简化，拒绝或离开时暂停。</p><p class="small-note">分支脚本可评测模型响应；真实幼儿的参与度与使用效果需另行验证。</p></article></div>
+          <h3 class="coverage-subtitle">交互与干扰：听到了，也要判断该不该回应</h3><div class="matrix-scroll"><table class="coverage-table"><thead><tr><th scope="col">事件类别</th><th scope="col">候选情况</th><th scope="col">期望行为</th></tr></thead><tbody><tr><td>环境噪声</td><td>风扇、敲桌、翻纸、键盘、突发碰撞</td><td>维持任务；听不清时请求重说。</td></tr><tr><td>背景语音</td><td>电视、音乐、旁人聊天</td><td>不将背景内容误当作学生请求。</td></tr><tr><td>接话对象</td><td>学生问家长、与同学交流、回应老师</td><td>判断是否在对 AI 说话，避免抢答。</td></tr><tr><td>自言自语</td><td>默念题目、试探答案、表达挫败</td><td>结合过程决定等待或帮助。</td></tr><tr><td>多人交叠</td><td>同时说话、旁人代答</td><td>跟随目标学生，不把代答算作其完成。</td></tr><tr><td>音画冲突</td><td>说已完成但仍在写；说“这个”但指向另一处</td><td>联合判断，必要时澄清。</td></tr><tr><td>对话控制</td><td>插话、停止、继续、重说、放慢、换种讲法</td><td>执行控制，保留任务与交付位置。</td></tr><tr><td>任务变化</td><td>自改、撤销、换题、翻页、返回旧题</td><td>更新状态，取消或忽略过期帮助。</td></tr><tr><td>离开与返回</td><td>转身、出画、与他人交流后回来</td><td>等待或暂停，回来后接续。</td></tr></tbody></table></div>
+          <div class="paired-note"><b>配对样本检验信息依赖</b><p>同一句“这个怎么做”，对 AI 与对同学说应有不同动作；同一句“再来一次”，听写应重读、音乐应重示范。相同画面配不同报词或演奏，答案应随声音变化；相同错字配不同修订历史，介入时机应不同。</p></div>
         </div>
         <div class="bench-preview" id="bench-examples" aria-labelledby="bench-examples-title">
           <div class="bench-preview-head"><h3 id="bench-examples-title">固定视角下，AI 看到什么？</h3><span>AI 合成 · 场景预览</span></div>
-          <p>六个独立场景，覆盖不同学科、学习载体与观察视角。点击图片查看原图。以下为合成视觉示例，非已采集评测数据。</p>
+          <p>现有六张图片展示部分视觉条件，可点击查看原图。以下为 AI 合成静态示例，不代表完整音视频 episode；听写、演奏与学前操作需补充真实声音和连续动作。</p>
           <div class="bench-preview-grid">
 <article data-medium="paper"><a class="image-link" href="bench-examples/frames/01-math-paper-overhead.png" target="_blank" rel="noopener"><img loading="lazy" src="bench-examples/frames/01-math-paper-overhead.png" alt="数学纸面俯拍：原题3(x+5)=12，学生写成3x+5=12。" width="1672" height="941"></a><div class="content"><div class="meta"><span>纸面 / 固定正上方俯拍</span><span class="id">SCENE 01</span></div><h3>数学 · 括号展开</h3><p class="target"><span>观察节点</span>题干与步骤区分；学生漏乘常数。</p><details><summary>查看图外参考</summary><p>3(x+5)=12 应展开为 3x+15=12。原题中的括号是题目的一部分。</p></details></div></article>
 <article data-medium="paper"><a class="image-link" href="bench-examples/frames/02-physics-paper-oblique.png" target="_blank" rel="noopener"><img loading="lazy" src="bench-examples/frames/02-physics-paper-oblique.png" alt="物理纸面斜拍：10N拉力向右、2N摩擦力向左，学生把两力相加计算加速度。" width="1672" height="941"></a><div class="content"><div class="meta"><span>纸面 / 固定斜上方视角</span><span class="id">SCENE 02</span></div><h3>物理 · 合力与加速度</h3><p class="target"><span>观察节点</span>识别力的方向，并核对学生的运算步骤。</p><details><summary>查看图外参考</summary><p>质量 2kg，拉力与摩擦力相反。a=(10−2)/2=4m/s²。</p></details></div></article>
@@ -132,21 +139,21 @@
         </div>
         <div class="evaluation">
           <div>
-            <div class="label">CONTROLLED COMPARISON</div><h3>让同一个模型，比较不同的管理机制</h3>
+            <div class="label">CONTROLLED COMPARISON</div><h3>先比较实时模型，再验证管理机制</h3>
             <table class="comparison"><caption class="sr-only">主比较方案</caption><tbody>
               <tr><td>原生 Realtime Tutor</td><td>充分调优的辅导提示，可主动介入，拥有相同工具。</td></tr>
               <tr><td>History-aware Agent</td><td>历史画面、滚动记忆与异步工具，可自主维护状态。</td></tr>
               <tr><td>OmniTutor Harness</td><td>显式轨迹、介入身份、任务版本与教学交付状态。</td></tr>
             </tbody></table>
-            <p class="fairness">统一前后台底座、输入频率、工具、参考材料与预算上限；同时报告实际调用、成本和失败。共同感知事实与原始多模态流分轨评测。</p>
+            <p class="fairness">模型比较采用统一任务、输入与预算协议，披露各模型支持的模态与流式交互方式；同底座比较 Harness 与强基线，再做机制消融。级联 ASR / VLM 系统单列协议，报告实际调用、成本和失败。</p>
           </div>
           <div>
             <div class="label">QUANTITATIVE EVIDENCE</div><h3>正确、及时、少打扰，且能讲下去</h3>
             <div class="metrics">
-              <div class="metric"><b>介入质量</b><span>及时有效介入率；误干预 / 分钟；漏报与无必要重复提醒。</span></div>
+              <div class="metric"><b>介入质量</b><span>及时有效介入率；误干预 / 分钟；对话对象识别与干扰误响应率。</span></div>
               <div class="metric"><b>教学与委派</b><span>讲解正确性、针对性；工具必要性、参数正确与演示可用率。</span></div>
               <div class="metric"><b>交互时延</b><span>首个有效回复、稳定错误到提醒、实际停声与演示就绪的分布。</span></div>
-              <div class="metric"><b>连续任务成功</b><span>打断恢复正确率、全轨迹成功率；分学科及留出组合报告。</span></div>
+              <div class="metric"><b>连续任务成功</b><span>动作完成识别、打断恢复正确率、全轨迹成功率；按任务、视角和干扰条件报告。</span></div>
             </div>
             <p class="ablation"><b>机制消融</b>　去轨迹修订记忆 / 去教学交付状态 / 去任务版本绑定 / 去并行备课与复用。</p>
           </div>
@@ -154,21 +161,21 @@
       </section>
 
       <section class="section" id="evidence" aria-labelledby="evidence-title">
-        <div class="section-head"><div class="section-title"><span class="num">03</span><h2 id="evidence-title">一套机制，三层研究证据</h2></div><p>贡献成立需要比较实验和机制归因。<br>当前页面呈现设计，不提供未运行的性能数字。</p></div>
+        <div class="section-head"><div class="section-title"><span class="num">03</span><h2 id="evidence-title">模型能力、交互机制与应用证据</h2></div><p>贡献成立需要比较实验和机制归因。<br>当前页面呈现设计，不提供未运行的性能数字。</p></div>
         <div class="evidence">
-          <article class="evidence-item"><span class="evidence-label">BENCH / 能力与失败</span><h3>连续轨迹上的可复查评测</h3><p>完整输入、事件标注和干预窗口；正负配对、分组划分与领域评分准则。领域专家盲评为主，校准后使用辅助评分。</p></article>
+          <article class="evidence-item"><span class="evidence-label">BENCH / 能力与失败</span><h3>连续轨迹上的可复查评测</h3><p>同步音视频、任务进展、事件标注与动作窗口；覆盖任务、视角和干扰，设置音画及历史依赖配对。领域评分与校准后的辅助评分结合。</p></article>
           <article class="evidence-item"><span class="evidence-label">METHOD / 机制与归因</span><h3>状态管理是否带来可归因收益</h3><p>主比较与消融之外，构造“当前画面相同、历史不同”的配对轨迹，检验旧错已讲、新尝试复发、换题和课件已生成但未交付。</p></article>
           <article class="evidence-item"><span class="evidence-label">DEMO / 行为与证据</span><h3>把成功过程和失败边界都展开</h3><p>用统一时间轴关联原始证据、系统动作、后台产物与实际播放。呈现完整成功及失败案例，并排对照 baseline 行为。</p></article>
         </div>
         <aside class="positioning">
           <b>相关工作与边界</b>
-          <div><p><a href="https://arxiv.org/html/2610.26411v1" target="_blank" rel="noopener noreferrer">主动手写数学辅导 [1]</a> 已包含纸面观察、历史与主动帮助；<a href="https://arxiv.org/html/2510.23477v2" target="_blank" rel="noopener noreferrer">MMTutorBench [2]</a> 已评测多模态数学教学和多轮适应；<a href="https://engineering.purdue.edu/cdesign/wp/amiwrite/" target="_blank" rel="noopener noreferrer">AmIWrite [3]</a> 已探索语音与手写同步讲解。我们拟研究的区分点是连续轨迹中介入、委派与打断恢复的联合机制，新颖性仍需进一步核验。</p>
+          <div><p><a href="https://arxiv.org/html/2610.26411v1" target="_blank" rel="noopener noreferrer">主动手写数学辅导 [1]</a> 已包含纸面观察、历史与主动帮助；<a href="https://arxiv.org/html/2510.23477v2" target="_blank" rel="noopener noreferrer">MMTutorBench [2]</a> 已评测多模态数学教学和多轮适应；<a href="https://engineering.purdue.edu/cdesign/wp/amiwrite/" target="_blank" rel="noopener noreferrer">AmIWrite [3]</a> 已探索语音与手写同步讲解。我们借鉴 [1] 的纸面观察、主动 / 被动帮助对照与等待设计，研究主体是 omni 实时音视频交互模型在多类教学活动中的能力；联合评测声音、动作、接话对象与连续交互。具体新颖性仍需进一步核验。</p>
             <div class="refs"><a href="https://arxiv.org/abs/2610.26411" target="_blank" rel="noopener noreferrer">[1] Visual Access &amp; Proactive Tutoring ↗</a><a href="https://arxiv.org/abs/2510.23477" target="_blank" rel="noopener noreferrer">[2] MMTutorBench ↗</a><a href="https://doi.org/10.1145/3772318.3790935" target="_blank" rel="noopener noreferrer">[3] AmIWrite · CHI 2026 ↗</a></div>
           </div>
         </aside>
       </section>
     </main>
-    <footer><span class="footer-brand">OMNITUTOR / RESEARCH BRIEF</span><span class="footer-note">2026.11.03 · Bench + Harness + Demo<br>下一步：冻结能力树与标注协议，试采配对轨迹，确认强基线。</span></footer>
+    <footer><span class="footer-brand">OMNITUTOR / RESEARCH BRIEF</span><span class="footer-note">2026.11.04 · Omni Realtime Interaction<br>下一步：冻结任务与事件标注，试采同步音视频轨迹，建立模型基线。</span></footer>
   </div>
   <script>
     'use strict';
